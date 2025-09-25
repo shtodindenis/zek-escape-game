@@ -1,0 +1,101 @@
+{
+  "mainMenu": {
+    "title": "ZOV escape",
+    "escapeMode": "Escape Mode",
+    "builderMode": "Builder Mode",
+    "settings": "Settings",
+    "exit": "Exit"
+  },
+  "levelSelect": {
+    "title": "Select level",
+    "back": "Back"
+  },
+  "settingsPage": {
+    "title": "Settings",
+    "back": "Back",
+    "language": "Language",
+    "music": "Music",
+    "sounds": "Sounds",
+    "fullscreen": "Fullscreen",
+    "resetBuilderRecord": "Reset builder high score",
+    "resetButton": "Reset",
+    "resetButtonCleared": "Cleared!",
+    "resetConfirmationTitle": "Confirmation",
+    "resetConfirmationMessage": "Are you sure you want to reset the builder high score? This action cannot be undone.",
+    "confirmReset": "Reset",
+    "cancel": "Cancel"
+  },
+  "escapePage": {
+    "title": "Escape Mode: Level {{levelId}}",
+    "titleShort": "Level {{levelId}}",
+    "description": "Guide the prisoner to the exit, avoiding guards and thugs. Build the shortest route!",
+    "success": "Escape successful!",
+    "failure": "You got caught!",
+    "failureDescription": "You can't go near guards or thugs.",
+    "yourPath": "Your path: {{count}} steps",
+    "optimalPath": "Optimal path: {{count}} steps"
+  },
+  "builderPage": {
+    "title": "Builder Mode",
+    "description": "Build the most intricate map. The goal is to make the prisoner wander as long as possible. If escape is impossible, you lose.",
+    "recordTime": "Record wandering time: {{time}} sec",
+    "simulationInProgress": "Simulation in progress...",
+    "escapeTime": "Escape time on this map: {{time}} sec",
+    "escapeImpossible": "Escape is impossible! You lost.",
+    "generateMaze": "Maze",
+    "exportLevel": "Export",
+    "importLevel": "Import",
+    "mazeSettingsTitle": "Maze Generation Settings",
+    "gridSizeSettings": "Grid Size Settings",
+    "width": "Width",
+    "height": "Height",
+    "corridorWidth": "Corridor Width",
+    "extraPaths": "Extra Paths",
+    "deadEndDensity": "Dead End Density",
+    "tools": "Tools",
+    "materials": "Materials",
+    "build": "Build",
+    "select": "Select",
+    "erase": "Erase",
+    "presets": "Presets",
+    "savePreset": "Save Current"
+  },
+  "gameControls": {
+    "controls": "Controls",
+    "runZek": "Run the Zek",
+    "simulating": "Simulating...",
+    "showBestPath": "Show Best Path",
+    "hideBestPath": "Hide Best Path",
+    "startOver": "Start Over",
+    "undo": "Undo Move"
+  },
+  "gameHeader": {
+    "restart": "Restart",
+    "levelSelect": "Level Select",
+    "settings": "Settings",
+    "help": "Help"
+  },
+  "helpModal": {
+    "title": "Help",
+    "description": "Your goal is to guide the prisoner from the start to the exit, using items and avoiding obstacles.",
+    "player": "Prisoner (You)",
+    "exit": "Exit",
+    "wall": "Wall (Concrete)",
+    "wallBrick": "Wall (Brick)",
+    "guard": "Guard (Avoid adjacent cells)",
+    "thug": "Thug (Avoid adjacent cells)",
+    "plank": "Planks (fragile wall)",
+    "crowbar": "Crowbar (breaks planks)",
+    "doorRed": "Red Door",
+    "keyRed": "Red Key",
+    "doorBlue": "Blue Door",
+    "keyBlue": "Blue Key"
+  },
+  "common": {
+    "errorRoot": "Failed to find the root element 'root'",
+    "errorTauriSync": "Failed to sync Tauri window state:",
+    "errorTauriFullscreen": "Error toggling fullscreen in Tauri:",
+    "errorBrowserFullscreen": "Error in browser: {{message}}",
+    "loadingLevel": "Loading level: {{levelId}}"
+  }
+}

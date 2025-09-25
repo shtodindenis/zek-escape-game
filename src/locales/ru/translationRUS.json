@@ -1,0 +1,101 @@
+{
+  "mainMenu": {
+    "title": "ZOV escape",
+    "escapeMode": "Режим побега",
+    "builderMode": "Режим стройки",
+    "settings": "Настройки",
+    "exit": "Выход"
+  },
+  "levelSelect": {
+    "title": "Выбери уровень",
+    "back": "Назад"
+  },
+  "settingsPage": {
+    "title": "Настройки",
+    "back": "Назад",
+    "language": "Язык",
+    "music": "Музыка",
+    "sounds": "Звуки",
+    "fullscreen": "Полный экран",
+    "resetBuilderRecord": "Сбросить рекорд стройки",
+    "resetButton": "Сбросить",
+    "resetButtonCleared": "Сброшено!",
+    "resetConfirmationTitle": "Подтверждение",
+    "resetConfirmationMessage": "Вы уверены, что хотите сбросить рекорд в режиме стройки? Это действие нельзя будет отменить.",
+    "confirmReset": "Сбросить",
+    "cancel": "Отмена"
+  },
+  "escapePage": {
+    "title": "Режим побега: Уровень {{levelId}}",
+    "titleShort": "Уровень {{levelId}}",
+    "description": "Проведите зека к выходу, избегая охраны и блатных. Постройте самый короткий маршрут!",
+    "success": "Побег удался!",
+    "failure": "Вас поймали!",
+    "failureDescription": "Нельзя наступать на клетки рядом с охраной и блатными.",
+    "yourPath": "Ваш путь: {{count}} шагов",
+    "optimalPath": "Оптимальный путь: {{count}} шагов"
+  },
+  "builderPage": {
+    "title": "Режим стройки",
+    "description": "Постройте самую запутанную карту. Цель — заставить зека блуждать как можно дольше. Если побег невозможен, вы проиграли.",
+    "recordTime": "Рекордное время блуждания: {{time}} сек",
+    "simulationInProgress": "Идёт симуляция...",
+    "escapeTime": "Время побега на этой карте: {{time}} сек",
+    "escapeImpossible": "Побег невозможен! Вы проиграли.",
+    "generateMaze": "Лабиринт",
+    "exportLevel": "Экспорт",
+    "importLevel": "Импорт",
+    "mazeSettingsTitle": "Настройки генерации лабиринта",
+    "gridSizeSettings": "Настройки размера поля",
+    "width": "Ширина",
+    "height": "Высота",
+    "corridorWidth": "Ширина коридоров",
+    "extraPaths": "Доп. пути",
+    "deadEndDensity": "Плотность тупиков",
+    "tools": "Инструменты",
+    "materials": "Материалы",
+    "build": "Сборка",
+    "select": "Выбор",
+    "erase": "Стереть",
+    "presets": "Схемы",
+    "savePreset": "Сохранить текущую"
+  },
+  "gameControls": {
+    "controls": "Управление",
+    "runZek": "Запустить зека",
+    "simulating": "Симуляция...",
+    "showBestPath": "Показать лучший путь",
+    "hideBestPath": "Скрыть лучший путь",
+    "startOver": "Начать заново",
+    "undo": "Отменить ход"
+  },
+  "gameHeader": {
+    "restart": "Начать заново",
+    "levelSelect": "Выбор уровня",
+    "settings": "Настройки",
+    "help": "Справка"
+  },
+  "helpModal": {
+    "title": "Справка",
+    "description": "Ваша задача — провести заключенного от старта до выхода, используя предметы и избегая препятствий.",
+    "player": "Заключенный (Вы)",
+    "exit": "Выход",
+    "wall": "Стена (бетон)",
+    "wallBrick": "Стена (кирпич)",
+    "guard": "Охранник (избегайте соседних клеток)",
+    "thug": "Блатные (избегайте соседних клеток)",
+    "plank": "Доски (хрупкая стена)",
+    "crowbar": "Лом (ломает доски)",
+    "doorRed": "Красная дверь",
+    "keyRed": "Красный ключ",
+    "doorBlue": "Синяя дверь",
+    "keyBlue": "Синий ключ"
+  },
+  "common": {
+    "errorRoot": "Не удалось найти корневой элемент 'root'",
+    "errorTauriSync": "Не удалось синхронизировать состояние окна Tauri:",
+    "errorTauriFullscreen": "Ошибка при переключении полноэкранного режима в Tauri:",
+    "errorBrowserFullscreen": "Ошибка в браузере: {{message}}",
+    "loadingLevel": "Загрузка уровня: {{levelId}}"
+  }
+}

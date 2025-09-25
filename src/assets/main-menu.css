@@ -1,0 +1,88 @@
+.main-menu-wrapper {
+  @apply fixed top-0 left-0 w-full h-screen overflow-hidden;
+}
+
+.main-menu-background {
+  @apply absolute top-0 left-0 w-full h-full bg-cover bg-center;
+  background-image: url('/assets/main-menu-bg.png');
+  animation: dynamic-pan-zoom 25s infinite alternate ease-in-out;
+  z-index: 1;
+}
+
+.main-menu-overlay {
+  @apply relative z-[2] w-full h-full flex flex-col;
+  padding: 3rem 5%;
+  background: radial-gradient(circle at center, rgba(17, 24, 39, 0.4) 0%, rgba(17, 24, 39, 0.9) 80%);
+}
+
+.main-menu-header {
+  @apply w-full text-center pb-8;
+}
+
+.main-menu-content {
+  @apply flex-grow w-full flex flex-col items-center justify-center;
+  padding-bottom: 15vh;
+}
+
+.game-title {
+  font-family: 'TitleFont', 'Impact', sans-serif;
+  font-size: clamp(4rem, 12vw, 8rem);
+  @apply text-white uppercase tracking-wider;
+  text-shadow:
+    1px 1px 0px #ccc,
+    2px 2px 0px #bbb,
+    3px 3px 0px #aaa,
+    4px 4px 0px #999,
+    5px 5px 0px #888,
+    6px 6px 10px rgba(0, 0, 0, 0.6);
+}
+
+.menu-nav ul {
+  @apply list-none p-0 m-0 flex flex-col gap-6;
+}
+
+.menu-button {
+  @apply flex items-center w-96 py-4 px-8 text-2xl font-semibold uppercase border-none cursor-pointer relative transition-all duration-200;
+  background-color: rgba(229, 231, 235, 0.95);
+  color: #1f2d37;
+  box-shadow: 4px 4px 0px #111827;
+}
+
+.menu-button:hover {
+  background-color: #fff;
+  color: #ff8800;
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0px #111827;
+}
+
+.menu-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #111827;
+}
+
+.exit-button {
+  background-color: rgba(55, 65, 81, 0.9);
+  color: #e5e7eb;
+  box-shadow: 4px 4px 0px #000;
+}
+
+.exit-button:hover {
+  background-color: rgba(31, 41, 55, 1);
+  color: #fff;
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0px #000;
+}
+
+.exit-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000;
+}
+
+
+.menu-icon {
+  @apply mr-4 text-2xl w-8 text-center;
+}
+
+.menu-text {
+  @apply flex-grow text-left;
+}

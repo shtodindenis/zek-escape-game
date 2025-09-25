@@ -1,0 +1,170 @@
+.game-wrapper {
+  @apply fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center overflow-hidden p-4;
+}
+
+.game-background {
+  @apply absolute top-0 left-0 w-full h-full bg-cover bg-center -z-10;
+  background-image: url('/assets/escape-bg.png');
+  animation: dynamic-pan-zoom 35s infinite alternate ease-in-out;
+}
+
+.game-header {
+  @apply absolute top-0 left-0 w-full h-16 px-4 flex justify-between items-center z-20;
+  background: linear-gradient(to bottom, rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0));
+}
+
+.game-header-level-title {
+  font-family: 'TitleFont', sans-serif;
+  @apply text-white text-2xl font-bold uppercase tracking-wider;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.game-header-button {
+  @apply h-12 w-12 flex items-center justify-center text-xl text-gray-300 rounded-full transition-all duration-200;
+  background-color: rgba(31, 41, 55, 0.7);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.game-header-button:hover {
+  @apply bg-gray-600 text-white scale-110;
+}
+
+.game-board-container {
+  @apply w-full max-w-7xl max-h-[calc(100vh-8rem)] flex items-center justify-center;
+}
+
+.cell-base {
+  @apply flex items-center justify-center border border-black/20 aspect-square cursor-pointer transition-colors relative;
+}
+
+.cell-base.danger-zone::before {
+  content: '';
+  @apply absolute inset-0 border-2 border-red-600/50 rounded-sm pointer-events-none;
+  box-shadow: inset 0 0 4px rgba(220, 38, 38, 0.5);
+}
+
+.cell-icon {
+  @apply select-none;
+}
+
+@keyframes pulse-guard {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+.guard-icon-animated {
+  animation: pulse-guard 2s infinite ease-in-out;
+}
+
+
+/* -- Дропдаун меню -- */
+.game-menu-overlay {
+  @apply fixed top-0 left-0 w-full h-full bg-black/50 backdrop-blur-sm z-30 transition-opacity duration-300 pointer-events-none opacity-0;
+}
+.game-menu-overlay.open {
+  @apply opacity-100 pointer-events-auto;
+}
+
+.game-menu-content {
+  @apply absolute top-0 right-0 h-full w-full max-w-xs bg-gray-800/90 shadow-2xl p-6 transform translate-x-full transition-transform duration-300;
+}
+.game-menu-overlay.open .game-menu-content {
+  @apply translate-x-0;
+}
+
+.game-menu-close-button {
+  @apply absolute top-4 right-4 text-gray-400 text-2xl hover:text-white transition-colors;
+}
+
+.game-menu-content ul {
+  @apply flex flex-col gap-2 mt-16;
+}
+
+.game-menu-content button {
+  @apply w-full flex items-center gap-4 p-4 text-left text-lg text-gray-200 rounded-lg hover:bg-gray-700 transition-colors;
+}
+
+.game-menu-content button span {
+  @apply text-xl w-8 text-center text-gray-400;
+}
+
+/* -- Финал окно -- */
+.game-success-overlay {
+  @apply fixed inset-0 z-40 flex items-center justify-center;
+}
+
+.game-success-modal {
+  @apply bg-gray-800/90 border border-gray-600 rounded-2xl p-8 text-center text-white shadow-lg flex flex-col items-center gap-4;
+  min-width: 350px;
+}
+
+.game-success-title {
+  font-family: 'TitleFont', sans-serif;
+  @apply text-4xl font-bold uppercase tracking-wider text-yellow-400;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.game-success-stars {
+  @apply flex gap-4 text-5xl text-gray-500;
+}
+
+.game-success-stars .collected {
+  @apply text-yellow-400;
+  transform: scale(1);
+  animation: starPop 0.5s ease-out forwards;
+}
+
+.game-success-stars .collected:nth-child(2) { animation-delay: 0.1s; }
+.game-success-stars .collected:nth-child(3) { animation-delay: 0.2s; }
+
+.game-success-actions {
+  @apply flex gap-4 mt-4;
+}
+
+.game-success-actions button {
+  @apply px-6 py-2 bg-gray-700 rounded-lg font-semibold uppercase tracking-wide hover:bg-yellow-500 hover:text-black transition-all;
+}
+
+@keyframes starPop {
+  0% { transform: scale(0); }
+  70% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* -- Справка -- */
+.help-modal-backdrop {
+  @apply fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4;
+}
+.help-modal-content {
+  @apply bg-gray-800/95 border border-gray-600 rounded-2xl w-full max-w-2xl max-h-[90vh] flex flex-col;
+}
+.help-modal-header {
+  @apply flex justify-between items-center p-4 border-b border-gray-700;
+}
+.help-modal-header h2 {
+  font-family: 'TitleFont', sans-serif;
+  @apply text-2xl font-bold text-white uppercase;
+}
+.help-modal-header button {
+  @apply text-gray-400 text-xl hover:text-white;
+}
+.help-modal-body {
+  @apply p-6 overflow-y-auto text-gray-300;
+}
+.help-modal-description {
+  @apply mb-6 text-lg;
+}
+.help-modal-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+.help-item {
+  @apply flex items-center gap-4 bg-gray-900/50 p-3 rounded-lg;
+}
+.help-item-cell-wrapper {
+  @apply w-12 h-12 flex-shrink-0;
+}
+.help-item-cell-wrapper .cell-base {
+  @apply w-full h-full;
+}
+.help-item-cell-wrapper .cell-icon {
+  @apply text-2xl;
+}

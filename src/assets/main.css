@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #111827;
+  }
+
+  @font-face {
+    font-family: 'TitleFont';
+    src: url('/fonts/Title-font.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@layer components {
+  .page-transition-wrapper {
+    @apply absolute top-0 left-0 w-full h-full;
+  }
+
+  @keyframes dynamic-pan-zoom {
+    from {
+      transform: scale(1.05);
+      background-position: 35% 50%;
+    }
+    to {
+      transform: scale(1.15);
+      background-position: 65% 50%;
+    }
+  }
+}
