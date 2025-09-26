@@ -1,20 +1,18 @@
 {
   "id": 2,
   "layout": [
-    "WWWWWWWWWWWWWWWWW",
-    "WS__T___________W",
-    "W_W_WWWWWWWWWWW_W",
-    "W_W_________W___W",
-    "W_WWWWWWWWW_W_W_W",
-    "W_________W_W_W_W",
-    "W_WWWWWWW_W_W_W_W",
-    "W_W_____W_W_T_W_W",
-    "W_W_WWWWW_W_WWW_W",
-    "W_W_____W_W_____W",
-    "W_WWWWW_W_WWWWW_W",
-    "W_____W_______W_W",
-    "W_WWWWWWWWWWWWW_W",
-    "W_______________EW",
-    "WWWWWWWWWWWWWWWWW"
+    "WWWWWWWWWWWWWWW",
+    "WS____________W",
+    "W_WWWWWWWWWWW_W",
+    "W___________W_W",
+    "W_WWWWWWWWW_W_W",
+    "W_________W_W_W",
+    "W_WWWWWWW_W_W_W",
+    "W_______W_W_W_W",
+    "W_WWWWW_W_W_W_W",
+    "W_____W_W_W_W_W",
+    "W_WWW_W_W_W_W_W",
+    "W___W_____W__EW",
+    "WWWWWWWWWWWWWWW"
   ]
 }

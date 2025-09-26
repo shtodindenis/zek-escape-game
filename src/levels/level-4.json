@@ -2,17 +2,15 @@
   "id": 4,
   "layout": [
     "WWWWWWWWWWWWWWW",
+    "W___________@WW",
+    "W_WWWWWWWWWWWWW",
     "WS____________W",
-    "W_WWWWWWWWWWW_W",
-    "W___________W_W",
-    "W_WWWWWWWWW_W_W",
-    "W_________W_W_W",
-    "W_WWWWWWW_W_W_W",
-    "W_______W_W_W_W",
-    "W_WWWWW_W_W_W_W",
-    "W_____W_W_W_W_W",
-    "W_WWW_W_W_W_W_W",
-    "W___W_____W__EW",
+    "WWWWW_WWWWWWWWW",
+    "W___W_W_____WEW",
+    "WWW_W_W_WWW_W_W",
+    "W_____W___W_W_W",
+    "W2WWWWWWW_W_W_W",
+    "W_________W___W",
     "WWWWWWWWWWWWWWW"
   ]
 }

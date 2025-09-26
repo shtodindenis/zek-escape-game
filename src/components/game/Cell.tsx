@@ -82,8 +82,6 @@ const cellVariants = {
 const Cell = memo(({ type, onMouseDown, onMouseEnter, prevPos, currentPos, isBuilder = false, animate = false, isDangerZone = false, visitedCount = 0, isSelected = false }: CellProps) => {
   const rotationClass = getRotationClass(prevPos || null, currentPos);
   
-  const iconSizeClass = isBuilder ? "text-xl" : "text-2xl md:text-3xl";
-
   const pathStyle = type === CellType.PLAYER_PATH && visitedCount > 1
     ? {
         filter: `saturate(${Math.max(0, 1 - (visitedCount - 1) * 0.2)}) brightness(${1 + (visitedCount - 1) * 0.1})`
@@ -104,7 +102,7 @@ const Cell = memo(({ type, onMouseDown, onMouseEnter, prevPos, currentPos, isBui
       )}
       style={pathStyle}
     >
-      <div className={clsx("cell-icon", iconSizeClass)}>
+      <div className="cell-icon">
         {iconMap[type as CellType | BuilderTool](rotationClass)}
       </div>
     </motion.div>

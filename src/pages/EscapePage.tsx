@@ -8,8 +8,17 @@ import { useLevelSelectStore } from '@/store/selectStore';
 import GameBoard from '@/components/game/GameBoard';
 import GameHeader from '@/components/game/GameHeader';
 import HelpModal from '@/components/game/HelpModal';
+import LevelTooltip from '@/components/game/LevelTooltip';
 import clsx from 'clsx';
 import Button from '@/components/common/Button';
+
+const tooltips: Record<number, string> = {
+  1: "Первый ход, он трудный самый. Доберись до выхода, используя стрелки или WASD.",
+  3: "Видишь красные зоны? Это владения блатных и охраны. Обходи их стороной, если не ищешь проблем.",
+  4: "На пути замок? Ищи ключ, он где-то поблизости. Без него дверь не поддастся.",
+  8: "Некоторые стены сделаны из досок. Найди лом, и сможешь пробить себе новый путь.",
+  15: "Ну все, доигрался, облава на выходе, петухам нет места на свободе.",
+};
 
 const EscapePage = () => {
   const { t } = useTranslation();
@@ -34,6 +43,7 @@ const EscapePage = () => {
 
   const [showHelp, setShowHelp] = useState(false);
   const [initialLoad, setInitialLoad] = useState(true);
+  const [showTooltip, setShowTooltip] = useState(false);
 
   const numericLevelId = levelId ? parseInt(levelId, 10) : 0;
   const maxLevel = levels.length;
@@ -42,8 +52,13 @@ const EscapePage = () => {
   useEffect(() => {
     if (numericLevelId > 0) {
       setInitialLoad(true);
+      setShowTooltip(false);
       loadAndResetGame(numericLevelId).then(() => {
         setTimeout(() => setInitialLoad(false), 1000);
+        if (tooltips[numericLevelId]) {
+          setShowTooltip(true);
+          setTimeout(() => setShowTooltip(false), 10000);
+        }
       });
     } else {
       navigate('/escape');
@@ -62,7 +77,14 @@ const EscapePage = () => {
 
   const handleRestart = () => {
     setInitialLoad(true);
+    setShowTooltip(false);
     resetStore();
+     if (tooltips[numericLevelId]) {
+        setTimeout(() => {
+            setShowTooltip(true);
+            setTimeout(() => setShowTooltip(false), 10000);
+        }, 500);
+    }
     setTimeout(() => setInitialLoad(false), 500);
   };
 
@@ -144,6 +166,8 @@ const EscapePage = () => {
       <div className="game-background"></div>
       <GameHeader levelId={numericLevelId} onHelpClick={() => setShowHelp(true)} onRestart={handleRestart} />
 
+      <LevelTooltip message={tooltips[numericLevelId]} isVisible={showTooltip} />
+      
       <main className="game-board-container">
         <GameBoard store={useEscapeStore} animate={initialLoad} />
       </main>

@@ -1,18 +1,8 @@
 {
   "id": 1,
   "layout": [
-    "WWWWWWWWWWWWWWW",
-    "WS____________W",
-    "W_WWWWWWWWWWW_W",
-    "W___________W_W",
-    "W_WWWWWWWWW_W_W",
-    "W_________W_W_W",
-    "W_WWWWWWW_W_W_W",
-    "W_______W_W_W_W",
-    "W_WWWWW_W_W_W_W",
-    "W_____W_W_W_W_W",
-    "W_WWW_W_W_W_W_W",
-    "W___W_____W__EW",
-    "WWWWWWWWWWWWWWW"
+    "WWWWWWWWWWWWWW",
+    "WS_________E_W",
+    "WWWWWWWWWWWWWW"
   ]
 }

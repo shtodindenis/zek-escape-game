@@ -44,8 +44,20 @@
 }
 
 .cell-icon {
-  @apply select-none;
+  @apply select-none flex items-center justify-center w-full h-full p-[10%];
+  font-size: clamp(0.5rem, 4.5vh, 2rem);
 }
+
+@media (min-width: 1024px) {
+  .cell-icon {
+    font-size: clamp(0.5rem, 2.5vw, 2.25rem);
+  }
+}
+
+.cell-icon svg {
+  @apply w-full h-full;
+}
+
 
 @keyframes pulse-guard {
   0%, 100% { transform: scale(1); opacity: 1; }
@@ -167,4 +179,12 @@
 }
 .help-item-cell-wrapper .cell-icon {
   @apply text-2xl;
+}
+
+/* -- Всплывающие подсказки -- */
+.level-tooltip-container {
+    @apply absolute top-20 left-1/2 -translate-x-1/2 z-20 w-full max-w-md pointer-events-none;
+}
+.level-tooltip-content {
+    @apply bg-black/70 backdrop-blur-sm border-2 border-yellow-500 text-white text-center rounded-xl shadow-lg p-4;
 }
